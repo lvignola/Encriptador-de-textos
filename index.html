@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de textos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <section>
+            <a href="https://app.aluracursos.com/"><img class="logo_alura" src="./img/logo_claro.png" alt="Logo de Alura"></a>
+        </section>
+    </header>
+    <main class="principal">
+        <h1 class="texto_titulo">ENCRIPTADOR DE TEXTOS ONLINE</h1>
+        <div class="contenedor_secciones">
+            <section class="seccion_encriptador">
+                <textarea class="cuadro_texto" placeholder="Ingrese el texto a encriptar..."></textarea>
+                <div class="texto_condiciones">
+                    <img src="./img/bi_exclamation-circle-fill.png" alt="Signo de exclamación" class="texto_condiciones_exclamacion">
+                    <p class="texto_condiciones_palabras">Ingresá solamente letras minúsculas y sin acentos</p>
+                </div>
+                <div class="contenedor_botones">
+                    <button class="boton_encriptar" onclick="btnEncriptar()">Encriptar</button>
+                    <button class="boton_desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+                </div>
+            </section>
+            <section class="tarjeta_encriptada">
+                <div class="input_tarjeta">
+                    <p class="mensaje_tarjeta">No se ha encontrado ningún mensaje aún</p>
+                    <img src="./img/zorro_detective.png" alt="zorro detective" class="imagen_zorro">
+                </div>
+                <button class="boton_copiar_texto" onclick="copiarTexto()">Copiar</button>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="enlaces_link">
+            <a href="https://www.github.com"><img src="./img/github-brands-solid.svg" alt="logo de Github"></a>
+        <a href="https://www.linkedin.com"><img src="./img/linkedin-brands-solid.svg" alt="logo de LinkedIn"></a>
+        <a href="https://www.discord.com"><img src="./img/discord-brands-solid-lg.svg" alt="logo de Discord"></a>
+        </div>
+        <h3 class="enlaces_mensaje">Encriptador desarrollado por Luciano Vignola</h3>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

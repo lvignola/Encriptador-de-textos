@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --fondo-principal:#021526;
+    --fondo-secundario: #03346E;
+    --fondo-terciario:#6EACDA;
+    --color-texto-principal: #E2E2B6;
+    --color-texto-secundario: #03346E;
+    --texto-titulo: "Lato", sans-serif;
+    --texto-secundario: "Barlow", sans-serif;
+
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: var(--fondo-principal);
+    color: var(--color-texto-principal);
+    box-sizing: border-box;
+}
+
+.header{
+    background: var(--fondo-principal);
+    padding: 1rem ;
+    border: 2px 0 0 0 solid var(--color-texto-principal);
+}
+
+.texto_titulo{
+       text-align: center;
+       font-weight: 400;
+       padding-bottom: 1.5rem;
+       font-family: var(--texto-titulo);
+}
+
+.contenedor_secciones{
+    display: flex;
+    justify-content: space-between;
+    height: 70vh;
+}
+
+.seccion_encriptador{
+    border: 2px solid var(--fondo-terciario);
+    width: 70%;
+    padding: 2%;
+    margin: 1% 2%;
+    border-radius: 2%;
+    
+}
+
+.cuadro_texto{
+    background-color: var(--fondo-terciario);
+    font-family: var(--texto-secundario);
+    font-size: 2rem;
+    color: var(--fondo-principal);
+    border: none;
+    height: 70%;
+    width: 100%;
+    border-radius: 2% 2% 0% 0%;
+}
+
+.cuadro_texto::placeholder{
+    font-family: var(--texto-secundario);
+    font-size: 2rem;
+    color: var(--fondo-principal);
+}
+
+.texto_condiciones{
+    display: flex;
+    margin: 0.5rem 1rem;
+}
+
+.texto_condiciones_exclamacion{
+    width: 1rem;
+    padding: 0.5rem 0.25rem;
+
+}
+
+.texto_condiciones_palabras{
+    font-family: var(--texto-secundario);
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.5rem;
+    
+}
+
+.contenedor_botones{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.boton_encriptar{
+    background: var(--fondo-secundario);
+    width: 35%;
+    text-align: center;
+    border-radius: 24px;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 16px 0;
+    color: var(--color-texto-principal);
+    font-family: var(--texto-secundario);
+}
+
+.boton_encriptar:hover {
+    transform: scale(1.1);
+}
+
+.boton_desencriptar{
+    background: var(--color-texto-principal);
+    width: 35%;
+    text-align: center;
+    border-radius: 24px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 16px 0;
+    color: var(--fondo-principal);
+    font-family: var(--texto-secundario);
+}
+
+.boton_desencriptar:hover{
+    transform: scale(1.1);
+}
+
+.tarjeta_encriptada{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-texto-principal);
+    width: 30%;
+    height: fit-content;
+    padding: 2rem;
+    margin: 1%;
+    border-radius: 5%;
+    gap: 40px;
+    
+}
+
+.cuadro_texto_encriptado{
+    height: 100vh;
+}
+
+.texto-encriptado {
+    color: var(--fondo-principal); 
+    font-size: 1.5rem;
+    font-family: var(--texto-secundario);
+    font-weight: 400;
+    padding: auto;
+}
+
+.input_tarjeta{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.mensaje_tarjeta{
+    font-family: var(--texto-secundario);
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--fondo-principal);
+    padding: 1rem;
+}
+
+.imagen_zorro{
+    width: 75%;
+    
+}
+
+.boton_copiar_texto{
+    background: var(--fondo-secundario);
+    width: 35%;
+    text-align: center;
+    border-radius: 24px;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 2%;
+    color: var(--color-texto-principal);
+    font-family: var(--texto-secundario);
+    display: none;
+}
+
+.boton_copiar_texto:hover{
+    transform: scale(1.1);
+}
+
+footer{
+    display: flex;
+    margin: 1% 15%;
+}
+
+.enlaces_link{
+    display: flex;
+    margin: 0 2%;
+    gap: 24px;
+}
+
+.enlaces_mensaje{
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin-left: 1%;
+}
+
+@media (max-width: 1200px) {
+
+    .header{
+       padding: 1%;
+    }
+    
+    .logo_alura{
+       padding: 1% 0 1% 0;
+       width: auto;
+    }
+    
+    
+    .contenedor_secciones{
+       flex-direction: column;
+       align-items: center;
+       height: fit-content;
+            
+    }
+    
+     .seccion_encriptador{
+       width: 70%;
+       height: 60vh;
+    } 
+    
+    .tarjeta_encriptada{
+        width: 65%;
+        height: 8rem;
+        margin-top: 3%;
+    }
+
+    .imagen_zorro{
+        display: none;
+    }
+    
+    footer{
+        justify-content: center;
+    }
+
+ }
+
+ @media (max-width: 900px) {
+
+    .logo_alura{
+        padding: 1%;
+        width: 15%;
+    }
+     
+     
+    .contenedor_secciones{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+             
+    }
+     
+    .seccion_encriptador{
+        width: auto;
+        height: 90vh;
+        gap: 10px;
+    }
+    
+    .texto_condiciones{
+        margin: auto;
+    }
+
+    .texto_condiciones_exclamacion{
+        width: 10%;
+    }
+   
+    .contenedor_botones{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        justify-content: center;
+        gap: 10px;
+
+    }
+
+    .tarjeta_encriptada{
+         width: auto;
+         height: auto;
+         margin: 5% 2%;
+         
+    }
+ 
+     
+    footer{
+         /* justify-content: center; */
+         margin: auto;
+    }
+    .enlaces_link{
+        display: flex;
+        margin: 1%;
+        gap: 10px;
+    }
+    
+    .enlaces_mensaje{
+        font-weight: 400;
+        font-size: 1rem;
+        margin-left: 1%;
+    }
+
+    .boton_encriptar{
+        width: auto;
+    }
+    
+    .boton_desencriptar{
+        width: auto;
+    }
+
+
+ }
